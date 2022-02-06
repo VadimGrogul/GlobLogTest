@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>
+    Find longest word
+</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your sentence</mat-label>
+            <textarea matInput ngModel (ngModelChange)="detectLargestWord($event)"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>The longest word is:</mat-label>
+            <input matInput readonly [value]="longestWord"/>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
